@@ -1,0 +1,34 @@
+<head>
+	<title>{% block title %} MUVIPICKY {% endblock title%}</title>
+	{% include "snippets/css.html" %}
+</head>
+<body>
+<h1>Helooo</h1>
+<p>This is nice!! we can place html inside views,\n is it good Practice?</p>
+<h2> {{ name }} </h2>
+<h2> {{ Place }} </h2>
+<h2> {{ num }} </h2>
+
+<p>
+{% if bool %}
+this is a random number: {{ num }}
+{% endif %}
+
+
+{% for item in list %}
+<br>
+{% if item|divisibleby:"2" %}
+ 			EVEN NUMBER:
+ 		{% endif %}
+ 		{{item}}	 
+{% endfor %}
+<br>
+{{list}}
+</p>
+{% include "snippets/nav.html" %}
+
+{% block content %}
+Super content 
+{% endblock content %}
+{% include "snippets/js.html" %}
+</body>
